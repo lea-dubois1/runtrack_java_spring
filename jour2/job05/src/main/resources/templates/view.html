@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Bonjour</p>
+<form action="/view" method="post">
+    <label for="nom">Votre nom : </label><input type="text" name="nom" id="nom">
+    <label for="birth">Votre date de naissance : </label><input type="text" name="birth" id="birth">
+    <button type="submit">Submit</button>
+</form>
+<div th:if="${ @viewController.message }">
+    <span th:text="${ @viewController.message }"></span>
+</div>
+
+</body>
+</html>
