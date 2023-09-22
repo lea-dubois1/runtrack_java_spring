@@ -6,5 +6,11 @@
 </head>
 <body>
     <p>Welcome</p>
+    <form action="/create" method="post" th:object="${ person }">
+        <label for="name">Your name : </label><input type="text" name="name" id="name" th:value="*{ name }">
+        <label for="age">Your age : </label><input type="number" name="age" id="age" th:value="*{ age }">
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/listUsers">All users</a>
 </body>
 </html>
